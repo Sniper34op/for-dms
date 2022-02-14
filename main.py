@@ -1,7 +1,8 @@
+import os
 import discord
 import asyncio
 from discord.ext import commands
- 
+token = os.getenv("token") 
 bot = commands.Bot(command_prefix = "m!")
  
 class BotData:
@@ -30,4 +31,4 @@ async def dm_all(ctx, *, args=None):
             except:
                 print("Couldn't send '" + args + "' to: " + member.name)
             await asyncio.sleep(60)
-bot.run ("OTQyNzMzMzM0MzE5MDc1Mzc5.Ygoy1g.3E3nqfXEd0H2YD9MEUAwj6UEfi0")
+bot.run (token)
